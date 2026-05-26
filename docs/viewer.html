@@ -208,9 +208,8 @@
       fill.position.set(-1, -0.5, -0.8);
       scene.add(fill);
 
-      // Grid + axes (sized after we know bbox)
+      // Grid (sized after we know bbox)
       let gridHelper = null;
-      let axes = null;
       let mesh = null;
       let wireframeOn = false;
 
@@ -239,25 +238,27 @@
         const center = new THREE.Vector3();
         bbox.getCenter(center);
 
-        // Recenter view around the mesh.
-        controls.target.copy(center);
+        // Re-center the mesh at world origin so it lines up with the grid
+        // regardless of its location in TimF's global fuselage coordinate
+        // frame. Bake the offset into the geometry so wireframe etc. follow.
+        geometry.translate(-center.x, -center.y, -center.z);
+        geometry.computeBoundingBox();
+
+        // Camera fit on the now-centered mesh.
         const maxDim = Math.max(size.x, size.y, size.z);
         const fitDist = maxDim / (2 * Math.tan(Math.PI * camera.fov / 360)) * 1.5;
-        camera.position.set(center.x + fitDist, center.y + fitDist * 0.6, center.z + fitDist);
-        camera.lookAt(center);
+        controls.target.set(0, 0, 0);
+        camera.position.set(fitDist, fitDist * 0.6, fitDist);
+        camera.lookAt(0, 0, 0);
         camera.near = Math.max(0.1, maxDim / 1000);
         camera.far = maxDim * 100;
         camera.updateProjectionMatrix();
 
-        // Grid sized to bbox.
+        // Grid sits directly under the centered mesh.
         const gridSize = Math.ceil(maxDim * 1.5 / 50) * 50;
         gridHelper = new THREE.GridHelper(gridSize, gridSize / 10, 0x2d3340, 0x1a1f29);
-        gridHelper.position.y = bbox.min.y;
+        gridHelper.position.y = -size.y / 2;
         scene.add(gridHelper);
-
-        axes = new THREE.AxesHelper(maxDim * 0.4);
-        axes.position.copy(bbox.min);
-        scene.add(axes);
 
         // Info text
         const triCount = geometry.attributes.position.count / 3;
@@ -275,6 +276,7 @@
         document.getElementById('reset').addEventListener('click', () => {
           camera.position.copy(initialCam.pos);
           controls.target.copy(initialCam.target);
+          camera.lookAt(controls.target);
           controls.update();
         });
       }).catch(err => {
