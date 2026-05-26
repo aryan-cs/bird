@@ -32,14 +32,15 @@
       const path = window.location.pathname;
       // Strip the leading /bird/ (the repo Pages base path). If you fork to
       // another user or repo name, this needs updating.
-      const m = path.match(/^\/bird\/(.+\.stl)$/i);
+      // Catch both .stl and .json (multi-part assembly manifests).
+      const m = path.match(/^\/bird\/(.+\.(?:stl|json))$/i);
       if (m) {
-        const stl = m[1];
-        const dest = `/bird/viewer.html?stl=${encodeURIComponent(stl)}`;
+        const file = m[1];
+        const dest = `/bird/viewer.html?stl=${encodeURIComponent(file)}`;
         // Use replace so back-button doesn't loop back to the 404.
         window.location.replace(dest);
         document.getElementById('detail').innerHTML =
-          `Redirecting to viewer for <code>${stl}</code>…`;
+          `Redirecting to viewer for <code>${file}</code>…`;
         return;
       }
       // Also handle .pdf — TimF's build PDF is at /bird/timf.pdf, but in case

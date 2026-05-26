@@ -1,0 +1,30 @@
+{
+  "title": "F-22 (assembled)",
+  "parts": [
+    "jet/LW-PLA/F22_Raptor_Fuselage/f22_raptor_nose.stl",
+    "jet/LW-PLA/F22_Raptor_Fuselage/f22_raptor_canopy.stl",
+    "jet/LW-PLA/F22_Raptor_Fuselage/f22_raptor_fuse_1.stl",
+    "jet/LW-PLA/F22_Raptor_Fuselage/f22_raptor_fuse_2.stl",
+    "jet/LW-PLA/F22_Raptor_Fuselage/f22_raptor_fuse_3.stl",
+    "jet/LW-PLA/F22_Raptor_Fuselage/f22_raptor_fuse_4.stl",
+    "jet/LW-PLA/F22_Raptor_Fuselage/f22_raptor_fan_hatch.stl",
+    "jet/LW-PLA/F22_Raptor_Fuselage/f22_raptor_ele_horn_cover_l.stl",
+    "jet/LW-PLA/F22_Raptor_Fuselage/f22_raptor_ele_horn_cover_r.stl",
+    "jet/LW-PLA/F22_Raptor_HStab/f22_raptor_hstab_l.stl",
+    "jet/LW-PLA/F22_Raptor_HStab/f22_raptor_hstab_r.stl",
+    "jet/LW-PLA/F22_Raptor_VStab/f22_raptor_vstab_l.stl",
+    "jet/LW-PLA/F22_Raptor_VStab/f22_raptor_vstab_r.stl",
+    "jet/LW-PLA/F22_Raptor_VStab/f22_raptor_rear_vstab_l.stl",
+    "jet/LW-PLA/F22_Raptor_VStab/f22_raptor_rear_vstab_r.stl",
+    "jet/LW-PLA/F22_Raptor_Wings/F22_Raptor_Wing_Left/f22_raptor_wing_l1f.stl",
+    "jet/LW-PLA/F22_Raptor_Wings/F22_Raptor_Wing_Left/f22_raptor_wing_l1b.stl",
+    "jet/LW-PLA/F22_Raptor_Wings/F22_Raptor_Wing_Left/f22_raptor_wing_l_tip.stl",
+    "jet/LW-PLA/F22_Raptor_Wings/F22_Raptor_Wing_Left/f22_raptor_l_ail_inner.stl",
+    "jet/LW-PLA/F22_Raptor_Wings/F22_Raptor_Wing_Left/f22_raptor_l_ail_outer.stl",
+    "jet/LW-PLA/F22_Raptor_Wings/F22_Raptor_Wing_Right/f22_raptor_wing_r1f.stl",
+    "jet/LW-PLA/F22_Raptor_Wings/F22_Raptor_Wing_Right/f22_raptor_wing_r1b.stl",
+    "jet/LW-PLA/F22_Raptor_Wings/F22_Raptor_Wing_Right/f22_raptor_wing_r_tip.stl",
+    "jet/LW-PLA/F22_Raptor_Wings/F22_Raptor_Wing_Right/f22_raptor_r_ail_inner.stl",
+    "jet/LW-PLA/F22_Raptor_Wings/F22_Raptor_Wing_Right/f22_raptor_r_ail_outer.stl"
+  ]
+}
