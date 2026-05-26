@@ -45,30 +45,9 @@
 </head>
 <body>
   <div class="container">
-    <h1>bird <span class="tag">F-22 Raptor, 700 mm, 50 mm EDF</span></h1>
-    <p class="sub">
-      3D-printable RC F-22 Raptor by <a href="https://www.rcgroups.com/forums/showthread.php?3931791-F22-Raptor-700mm-LW-PLA" target="_blank" rel="noopener">TimF</a>
-      · <a href="timf.pdf">build instructions PDF</a>
-      · <a href="https://github.com/aryan-cs/bird" target="_blank" rel="noopener">source on GitHub</a>
-    </p>
-
-    <div class="links">
-      <span class="pill twin">⚡ twin_edf/ — modified for twin 50 mm EDFs</span>
-      <span class="pill">jet/LW-PLA/ — original TimF parts</span>
-    </div>
+    <h1>bird</h1>
 
     <div id="list"></div>
-
-    <div class="footer">
-      <p>
-        Click any STL to open it in the interactive viewer (Three.js, mouse-drag to orbit, scroll to zoom).
-        Direct viewer link pattern: <code>viewer.html?stl=&lt;path&gt;</code>.
-      </p>
-      <p>
-        Files are fetched from <a href="https://www.jsdelivr.com/" target="_blank" rel="noopener">jsDelivr</a>
-        (CDN-cached) with fallback to <a href="https://raw.githubusercontent.com" target="_blank" rel="noopener">raw.githubusercontent.com</a> for files over 50 MB.
-      </p>
-    </div>
   </div>
 
   <script>
@@ -76,18 +55,6 @@
     // Update this list when files are added/removed (or regenerate with the
     // helper in /docs/build_index.py).
     const SECTIONS = [
-      {
-        title: 'Twin-EDF conversion (modified)',
-        cls: 'twin',
-        files: [
-          'twin_edf/output/stl/fuse2_modified.stl',
-          'twin_edf/output/stl/fuse3_modified.stl',
-          'twin_edf/output/stl/fuse4_modified.stl',
-          'twin_edf/output/stl/fuse2_new_ducts.stl',
-          'twin_edf/output/stl/fuse3_new_ducts.stl',
-          'twin_edf/output/stl/fuse4_new_ducts.stl',
-        ],
-      },
       {
         title: 'Fuselage',
         files: [
