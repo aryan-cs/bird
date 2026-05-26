@@ -169,7 +169,9 @@
         a.title = f;
         const ext = document.createElement('span');
         ext.className = 'ext';
-        ext.textContent = '.stl';
+        const fname = f.split('/').pop();
+        const dot = fname.lastIndexOf('.');
+        ext.textContent = dot >= 0 ? fname.slice(dot) : '';
         card.appendChild(a);
         card.appendChild(ext);
         grid.appendChild(card);
